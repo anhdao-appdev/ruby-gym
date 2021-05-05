@@ -7,8 +7,8 @@
 p "Enter two words separated by a comma"
 
 user_words = gets.chomp.split(",")
-character_1=user_words[0].strip.downcase.split("").sort
-character_2=user_words[1].strip.downcase.split("").sort
+character_1=user_words[0].gsub(" ","").downcase.split("").sort
+character_2=user_words[1].gsub(" ","").downcase.split("").sort
 if character_1==character_2
     p "true"
 else
