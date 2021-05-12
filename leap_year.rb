@@ -16,7 +16,15 @@
 p "Enter a year:"
 input_year=gets.chomp.to_i
 if input_year.modulo(4)==0
-    p input_year.to_s+" is a leap year!"
+    if input_year.modulo(100)==0
+        if input_year.modulo(400)==0
+            p input_year.to_s+" is a leap year!"
+        else
+            p input_year.to_s+" is not a leap year."
+        end
+    else
+        p input_year.to_s+" is a leap year!"
+    end
 else
     p input_year.to_s+" is not a leap year."
 end

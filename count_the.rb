@@ -5,5 +5,5 @@
 
 p "Enter a sentence:"
 sentence=gets.chomp.downcase
-count=sentence.count("the")/3
+count=sentence.scan(/the/).length-sentence.scan(/the[a-z]/).length
 p "'the' appeared "+count.to_s+" times"

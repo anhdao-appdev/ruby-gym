@@ -32,7 +32,8 @@ p "Enter X,Y coordinates in the format 'X,Y'"
 coordinates=gets.chomp.split(",")
 X=coordinates[0].to_f
 Y=coordinates[1].to_f
-distance=(X**2+Y**2)*(1.to_f/2.to_f)
+distance=(X**2+Y**2)**(1.to_f/2.to_f)
+p distance
 if distance>10
     p "0 points"
 elsif distance<=10 && distance>5
