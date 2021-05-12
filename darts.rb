@@ -29,3 +29,16 @@
 #     (x-j)^2 + (y-k)^2 = r^2
 
 p "Enter X,Y coordinates in the format 'X,Y'"
+coordinates=gets.chomp.split(",")
+X=coordinates[0].to_f
+Y=coordinates[1].to_f
+distance=(X**2+Y**2)*(1.to_f/2.to_f)
+if distance>10
+    p "0 points"
+elsif distance<=10 && distance>5
+    p "1 points"
+elsif distance<=5 && distance>1
+    p "5 points"
+else
+    p "10 points"
+end

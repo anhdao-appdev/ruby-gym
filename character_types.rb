@@ -14,3 +14,11 @@
 #  "Number of digits in the string is: 4"
 
 p "Enter a sentence:"
+sentence=gets.chomp.downcase
+letters=sentence.gsub(" ","").gsub(/[0-9]/,"")
+numbers=sentence.gsub(" ","").gsub(/[a-z]/,"")
+n_spaces=sentence.count(" ")
+
+p "Number of letters in the string is: "+letters.length.to_s
+p "Number of spaces in the string is: "+n_spaces.to_s
+p "Number of digits in the string is: "+numbers.length.to_s

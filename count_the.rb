@@ -4,3 +4,6 @@
 #   and finally prints, "'the' appeared x times", where x is an Integer
 
 p "Enter a sentence:"
+sentence=gets.chomp.downcase
+count=sentence.count("the")/3
+p "'the' appeared "+count.to_s+" times"
