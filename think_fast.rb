@@ -32,4 +32,24 @@ some_random_input = unpredictable_inputs.sample
 p some_random_input
 
 # Write your code below
-
+if some_random_input.class==String
+  p some_random_input.downcase
+elsif some_random_input.class==Time
+  p some_random_input.strftime("%A").downcase
+elsif some_random_input.class==Integer
+  if some_random_input.modulo(2)==1
+    p some_random_input.to_s+" is odd"
+  else
+    p some_random_input.to_s+" is even"
+  end
+elsif some_random_input.class==Symbol
+  p some_random_input.downcase
+elsif some_random_input.class==NilClass
+  p "no object provided"
+elsif some_random_input.class==TrueClass
+  p "you may pass"
+elsif some_random_input.class==FalseClass
+  p "you may not pass"
+elsif some_random_input.class==Hash
+  p some_random_input.keys.to_a
+end

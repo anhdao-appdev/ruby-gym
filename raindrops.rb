@@ -37,3 +37,18 @@
 
 
 p "Enter an integer"
+num=gets.chomp.to_i
+message=""
+if num.modulo(3)==0
+    message=message+"Pling"
+end
+if num.modulo(5)==0
+    message=message+"Plang"
+end
+if num.modulo(7)==0
+    message=message+"Plong"
+end
+if message==""
+    message=num.to_s
+end
+p message

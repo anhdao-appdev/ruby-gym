@@ -11,3 +11,13 @@
 # 16
 
 p "Enter at least 2 numbers, separated by spaces:"
+numbers=gets.chomp.split(" ")
+sum=0
+numbers.each do |num|
+    num=num.to_i
+    if num.modulo(2)==1
+        sum=sum+num
+    end
+end
+
+p sum
